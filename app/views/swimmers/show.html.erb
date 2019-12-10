@@ -1,0 +1,119 @@
+
+<div class="row">
+
+	<div class="col-md-4">
+		
+		<%= image_tag @swimmer.swimmer_img.url(:swimmer_show), class: "swimmer-show" %>
+	
+	</div>
+	
+
+
+	<div class="col-md-8">
+
+
+	<div class="book-info">
+
+	<h2 class="book-title"><%= @swimmer.name %></h2>
+	<h2 class="book-author "><span class="text-big">Пол: </span> <%= @swimmer.gender %></h2>
+	<h2 class="book-author "><span class="text-big">Возраст: </span> <%= @swimmer.age %></h2>
+	<h2 class="book-author "><span class="text-big">Рост: </span> <%= @swimmer.rost %></h2>
+	<h2 class="book-author "><span class="text-big">Вес: </span> <%= @swimmer.weihgt %></h2>
+	<h3 class="book-author1 "><span class="text-big">Клуб: </span> <%= @swimmer.poolclub %></h3>
+	
+	
+	<h3 class="book-author1 "><span class="text-big">Тренер: </span> <%= @swimmer.coach %></h3>
+
+	<p class="book-author"><span><dt>Достижения спортсмена: </dt></span> <div class= "input-field1"> <%= @swimmer.achievement %></div></p>
+
+	<p class="bbook-desc"><span><dt>Лучшие результаты: </dt></span> <div class= "input-field1"> <%= @swimmer.bestresult %></div></p>
+	
+	<% if user_signed_in? %>
+
+		
+			<h3 class="book-author "><span class="text-big">Контакт для связи: </span> <%= @swimmer.nomertel %></h3>
+	
+
+	<% end %>	
+
+	
+
+
+	
+	<h2 class="avg-rating">Общий рейтинг</h2>
+	<div class="average-review-rating input-field1" data-score=<%= @average_review %>></div>
+	<span class="number-of-reviews input-field1">Основано на <%= @swimmer.reviews.count %> отзывах</span>
+	<p class="book-desc"><span><dt>Полная информация о спортсмене: </dt></span> <div class= "input-field1"> <%= @swimmer.description %></div></p>
+
+</div>
+
+</div>
+
+<div class="row">
+
+	
+	<div class="col-md-4">
+
+		<div class="reviews ">
+
+			<!-- Where the reviews/ratings will go -->
+			<h1>Рейтинг</h1>
+			
+			<%= render @swimmer.reviews %>
+		
+			
+		
+
+
+			<div>
+				<%= link_to "Добавить отзыв", new_swimmer_review_path(@swimmer), class: "btn-custom" %>
+			</div>
+
+		</div>	
+
+	</div>
+
+</div>
+
+<br>
+
+<div class="links btn-group">
+
+	<%= link_to "Назад", root_path, class: "btn btn-custom" %>
+
+	<% if user_signed_in? %>
+
+		<% if @swimmer.user_id == current_user.id %>
+
+			<%= link_to "Изменить", edit_swimmer_path(@swimmer), class: "btn btn-custom" %>
+			<%= link_to "Удалить", swimmer_path(@swimmer), method: :delete, data: { confirm: "Вы уверены?" }, class: "btn btn-custom"%>
+
+		<% end %>
+
+	<% end %>	
+
+</div>	
+
+
+<script>
+	$('.review-rating').raty({
+		readOnly: true,
+		score: function() {
+			return $(this).attr('data-score');
+		},
+		path: '/assets/'
+	});
+</script>
+
+
+<script>
+	$('.average-review-rating').raty({
+		readOnly: true,
+		path: '/assets/',
+		score: function() {
+			return $(this).attr('data-score')
+		}
+	});
+</script>
+
+

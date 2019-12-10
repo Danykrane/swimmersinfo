@@ -1,0 +1,24 @@
+<h1 class="current-category"><%= params[:category] %></h1>
+
+<% if @swimmers.count == 0 %>
+		<h1>В данной категории нет пловцов</h1><br>
+
+<% else %>	
+	
+	<div class="row">
+		<% @swimmers.each do |swimmer| %>
+
+		<div class="col-md-3">
+					<a href="/swimmers/<%= swimmer.id %>">
+						<%= image_tag swimmer.swimmer_img.url(:swimmer_index), class: "swimmer" %>
+					</a>
+				</div>	
+		<% end %>
+	</div>
+
+<% end %>
+
+<%= link_to "Добавить спортмена", new_swimmer_path, class: "btn-custom" %>
+
+<br>
+<br>

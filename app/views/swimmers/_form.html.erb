@@ -1,0 +1,29 @@
+<%= simple_form_for @swimmer, :html => { :multipart => true } do |f|   %>
+	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Выбери категорию") %>
+	<%= f.file_field :swimmer_img %>
+	<%= f.input :name, label: "Имя спортсмена" %>
+
+	<%= f.input :gender, label: "Пол спортсмена" %>
+	<%= f.input :age, label: "Возраст спортсмена" %>
+	<%= f.input :poolclub, label: "Спортшкола" %>
+	<%= f.input :coach , label: "Имя тренера" %>
+
+	<%= f.input :rost, label: "Рост спортсмена" %>
+	<%= f.input :weihgt, label: "Вес спортсмена" %>
+	<%= f.input :achievement, label: "Достижения:" %>
+	<%= f.input :bestresult, label: "Лучшие результаты" %>
+	<%= f.input :nomertel, label: "Контакт для связи" %>
+
+
+
+
+	<%= f.input :description, label: "Информация о спортсмене"%>
+	
+	<%= f.button :submit, "Создать" , :class => 'btn-custom2' %>
+	
+
+ 
+
+
+
+<% end %>  

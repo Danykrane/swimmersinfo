@@ -1,0 +1,27 @@
+<div class="col-md-6 col-md-offset-3">
+
+	<div class="edit-review-form">
+
+		<h1>Изменение ревью</h1>
+
+		<%= simple_form_for([@swimmer, @review]) do |f| %>
+			<div id="rating-form">
+				<label>Рейтинг</label>
+			</div>
+			<%= f.input :comment %>
+			<%= f.button :submit, :class => "btn-custom2" %>
+		<% end %>	
+
+	</div>
+
+</div>
+
+asset pipeline
+turbolinks (динамически обновляться: те, корторые статические остаются прежними, вешает обработчик)
+
+<script>
+	$('#rating-form').raty({
+		path: '/assets/',
+		scoreName: 'review[rating]'
+	});
+</script>

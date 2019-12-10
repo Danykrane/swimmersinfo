@@ -1,0 +1,573 @@
+@import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500); 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.swimmer {
+	height: 350px;
+	width: 250px;
+	margin-bottom: 40px;
+}
+
+.swimmer-show {
+	height: 475px;
+	width: 325px;
+	
+}
+
+
+.input-field1{
+
+	word-wrap: break-word;
+	white-space: pre-line; 
+	}
+.text-big{
+	
+}
+
+
+.navbar-header {
+
+		.navbar-brand {
+			color: #000000;
+			letter-spacing: 1.4px;
+			background-color: #0068af;
+			
+			
+		}
+
+	
+	}
+
+	book {
+	height: 350px;
+	width: 250px;
+	margin-bottom: 40px;
+	background-color: #0068af;
+	
+	
+}
+@mixin background-tile {
+	box-sizing: border-box;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 3px 3px 5px 6px #141A2E;
+	padding: 1em 1.25em;
+
+}
+
+
+/* General styles */
+
+body {
+	
+background-color: #f5f5f5;
+	font-family: 'Lora', serif;
+	height:100vh;
+  width:100vw;
+  background:linear-gradient(160deg, #AD5162, #AD5162 60%, #00D9C1 60%, white);
+background-image: url(http://ipic.su/img/img7/fs/1.1575936088.png
+);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-cover: cover;
+	-moz-background-cover: cover;
+	-ms-background-cover: cover;
+	-webkit-background-cover: cover;
+
+   
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 300;
+}
+
+p.alert, p.notice {
+	margin: 0;
+}
+
+
+/* Navbar/navigation styles */
+
+.navbar {
+	font-family: 'Fira Sans', sans-serif;
+	text-transform: uppercase;
+}
+.navbar-default {
+	background-color: #191919;
+	padding-bottom: 5px;
+	padding-top: 5px;
+
+	.navbar-nav > li > a {
+		color: #E0DCE3;
+		&:hover {
+			color: darken(#008618, 5%);
+			transition: 0.5s;
+		}
+	}
+
+	.navbar-header {
+
+		.navbar-brand {
+			color: #E0DCE3;
+			letter-spacing: 1.4px;
+		}
+
+	}
+
+	.dropdown-menu > li > a:hover {
+		background-color: darken(#008618, 5%);
+		color: #fff;
+	}
+
+	.navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+		background-color: darken(#008618, 5%);
+		color: #fff;	
+	}
+
+}
+
+.dropdown-menu > .active > a {
+	background-color: #008618;
+	color: #fff;
+}
+
+
+
+
+/* Button/link styles */
+
+.btn-custom {
+	color: darken(#0068af, 5%);
+	background-color: #fff;
+	border: 1px solid darken(#0068af, 5%);
+	padding: 8px 20px;
+	border-radius: 20px;
+	font-family: 'Fira Sans', sans-serif;
+	&:hover {
+		text-decoration: none;
+		background-color: darken(#008618, 5%);
+		color: #fff;
+		transition: 0.5s;
+	}
+}
+
+.btn-custom2 {
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #222;
+	padding: 8px 20px;
+	border-radius: 5px;
+	font-family: 'Fira Sans', sans-serif;
+	&:hover {
+		text-decoration: none;
+		background-color: #031F52;
+		color: #fff;
+		transition: 0.5s;
+	}	
+}
+
+.links {
+
+	.btn-custom {
+		padding: 3px 10px;
+		font-weight: 300;
+	}
+
+}
+
+.book-links {
+
+	.btn-custom {
+		padding: 3px 10px;
+		font-weight: 300;
+		margin-top: 40px;	
+	}
+
+}
+
+/* Book styles */
+
+.swimmer{
+	height: 350px;
+	width: 250px;
+	margin-bottom: 40px;
+	@include background-tile;
+	float: left;
+	margin-right: 80px;
+}
+
+.swimmer-show {
+	height: 475px;
+	width: 325px;
+	@include background-tile;
+	margin-bottom: 20px;
+
+}
+
+.book-info {
+
+
+	@include background-tile;
+	
+	.book-title {
+		margin-top: 0;
+		font-size: 3em;
+
+	}
+
+	.avg-rating {
+		font-size: 1.5em;
+		margin-top: 15px;
+		margin-bottom: 5px;
+
+	}
+
+	.number-of-reviews {
+		font-size: 0.85em;
+		font-style: italic;
+	}
+
+	.book-author {
+		font-size: 2.0em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		span {
+			font-size: 0.80em;
+		}	
+	}
+
+	.book-author1 {
+		font-size: 2.0em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		span {
+			font-size: 0.80em;
+		}	
+	}
+
+	.book-desc {
+		font-size: 1.05em;
+		line-height: 1.5;
+		margin-bottom: 15px;
+		margin-top: 15px;
+	}
+
+	.input-field1{
+
+	word-wrap: break-word;
+	white-space: pre-line; 
+	}
+
+}
+
+
+/* current-category styles */
+
+.current-category {
+	margin-bottom: 40px;
+}
+
+
+/* Reviews styles */
+
+.reviews {
+
+	@include background-tile;
+	
+	margin-top: 40px;
+
+	h1 {
+		margin-top: 0;
+		margin-bottom: 15px;
+		font-size: 2em;
+	}
+
+	.review {
+		border-bottom: 1px solid gainsboro;
+		margin-bottom: 15px;
+		padding-bottom: 10px;
+
+
+	
+
+		.review-comment {
+			font-size: 1.05em;
+			line-height: 1.5;
+		}
+
+	}
+
+	.new-review {
+		padding-top: 8px;
+	}
+
+}
+
+/* New Book Form styles */
+
+.new-book-form {
+	@include background-tile;
+
+	h1 {
+		margin-top: 0;
+	}
+
+	#category_id {
+		margin-bottom: 10px;
+	}
+
+	#book_book_img {
+		margin-bottom: 10px;
+	}
+
+}
+
+
+/* Edit Book Form styles */
+
+.edit-book-form {
+
+	@include background-tile;
+
+	h1 {
+		margin-top: 0;
+	}
+
+	#book_category_id {
+		margin-bottom: 10px;
+	}
+
+	#book_book_img {
+		margin-bottom: 10px;
+	}
+
+}
+
+/* New/Edit review form styles */
+
+.new-review-form, .edit-review-form {
+	@include background-tile;
+
+	h1 {
+		margin-top: 0;
+	}
+
+	#rating-form {
+		margin-bottom: 15px;
+
+		label {
+			display: block;
+		}
+
+	}
+
+}
+
+
+/* Signup/Login form styles */
+
+.signup-form {
+	@include background-tile;
+
+	h2 {
+		margin-top: 0;
+	}
+
+}
+
+.login-form {
+	@include background-tile;
+
+	h2 {
+		margin-top: 0;
+	}
+
+}
+
+
+
+@media (max-width: 1500px) { 
+
+.btn-custom {
+	
+}
+body {
+	background-color: #f5f5f5;
+	font-family: 'Lora', serif;
+	background-image: url(https://i.pinimg.com/564x/d6/a7/e6/d6a7e61853945067fb557cd03fc7ca2a--palm-trees-flamingos.jpg);
+	background-cover: cover;
+	-moz-background-cover: cover;
+	-ms-background-cover: cover;
+	-webkit-background-cover: cover;
+
+   
+}
+ }
+
+
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 1800px) { 
+
+ 
+
+ body {
+
+
+   background-color: #f5f5f5;
+	font-family: 'Lora', serif;
+	
+	background-cover: cover;
+	-moz-background-cover: cover;
+	-ms-background-cover: cover;
+	-webkit-background-cover: cover;
+}}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1800px) { 
+
+
+body {
+	background-color: #f5f5f5;
+	font-family: 'Lora', serif;
+	height:100vh;
+  width:100vw;
+  background:linear-gradient(160deg, #AD5162, #AD5162 60%, #00D9C1 60%, white);
+background-image: url(http://ipic.su/img/img7/fs/1.1575936088.png
+);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-cover: cover;
+	-moz-background-cover: cover;
+	-ms-background-cover: cover;
+	-webkit-background-cover: cover;
+
+   
+}
+ }
+
+
+.social-footer {
+  padding: 1rem;
+  background: #8a8a8a;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+}
+
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: #fefefe;
+}
+
+.social-footer .social-footer-icons .fa:hover {
+  color: #4a4a4a;
+  transition: color 0.3s ease-in;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #282922;
+  text-align: center;
+}
+
+
+ ul#menu li{
+
+        display:inline-block; /* расположить пункты горизонтально */
+        font-size:28px;
+        width:10%;
+		margin:0;
+		padding: 5px 15px;
+		
+
+    }
+
+
+	
+ #facebook{
+ background: #4267b2;
+ -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+ &:hover {
+ 			background: #0168af;
+			-webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  			-webkit-text-fill-color: transparent;
+		}
+		font-size: 35px;
+	}
+
+ #twitter{
+ background: #1da1f2;
+ -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+ &:hover {
+ 			background: #1a95e0;
+			-webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  			-webkit-text-fill-color: transparent;
+		}
+		font-size: 35px;
+	}
+
+#google{
+ background: #eb4236;
+ -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+ &:hover {
+ 			background: #ff4081;
+			-webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  			-webkit-text-fill-color: transparent;
+		}
+		font-size: 35px;
+	}
+
+  #insta {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &:hover {
+  			background: radial-gradient(circle at 20% 107%, #fdf497 0%, #fdf497 4%, #fd5949 55%, #d6249f 90%, #285AEB 50%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+		}
+		font-size: 35px;
+	}

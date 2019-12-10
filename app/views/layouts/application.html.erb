@@ -1,0 +1,132 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+<script src="main.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <head>
+    <title>Swimmers-Info</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+
+
+
+
+
+  </head>
+
+
+  <body>
+
+
+
+    <nav class="navbar navbar-default">
+    
+
+    <div class="container">
+
+      <div class="navbar-header">
+        
+
+
+
+    
+
+
+          
+        <div class="style_1">
+        <%= link_to "Swimmers-Info", root_path, class: "navbar-brand" %>
+        </div>
+      </div>
+
+      <ul class="nav navbar-nav">
+  
+       
+
+        <% if user_signed_in? %>
+
+          <li><%= link_to "Выйти", destroy_user_session_path, method: :delete %></li>
+        <% else %>  
+         <li><%= link_to "Регистрация", new_user_registration_path %></li>
+          <li><%= link_to "Вход", new_user_session_path %></li>
+        <% end %>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+    
+        <% if user_signed_in? %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Категория<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <% Category.all.each do |category| %> 
+             <li class="<%= 'active' if params[:category] == category.name %>"> <!-- загорание серым на использ категории -->
+                <%= link_to category.name, swimmers_path(category: category.name), class: "link" %>
+              </li>
+            <% end %>
+            <% end %>
+         </ul>
+        </li>
+      
+
+        <% if user_signed_in? %>
+          <li><%= link_to "Добавить спортмена", new_swimmer_path %></li>
+
+        <% end %>
+        
+      </ul>
+
+      
+
+    </div>
+
+  </nav>
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+  <div class="container">
+    <%= yield %>
+  </div>  
+
+<br>
+<br>
+  </body>
+<br>
+<br>
+<br>
+<br>
+
+<div class="footer">
+  <ul id = "menu">
+
+        <li><a href="https://www.instagram.com/mosswimming/?hl=ru"><i class="fa fa-instagram" id="insta" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/RussianSwimmingFederation/"><i class="fa fa-facebook" id="facebook"  aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/?lang=ru"><i class="fa fa-twitter" id="twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://aboutme.google.com/u/0/?referer=gplus"><i class="fa fa-google-plus" id="google" aria-hidden="true"></i></a></li>
+        
+    
+  </ul>
+</div>
+
+
+
+
+  
+</html>
