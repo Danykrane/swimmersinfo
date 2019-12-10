@@ -15,8 +15,6 @@ group :assets do
 end 
 
 
-gem 'sqlite3'
-
 gem 'jquery'
 
 gem 'paperclip'
